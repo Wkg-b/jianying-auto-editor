@@ -35,6 +35,28 @@ python run.py check
 
 `run.py check` 会打印工作台路径、剪映草稿目录，以及 pyJianYingDraft / opencv / ffmpeg 是否就绪。
 
+## 配合 AI 编程工具使用
+
+本项目是纯命令行 + JSON 配置的结构，**不依赖任何特定 IDE**，可以直接交给 AI 编程工具驱动：
+把仓库目录作为工作区打开，让 AI 帮你写 `series/<系列名>.json` 和 `episodes/<集名>.json`、执行 `compose` / `verify`、
+根据报错修正配置即可。字段说明都在本 README 里，AI 可直接读取。
+
+已验证 / 适用的工具：
+
+| 工具 | 使用方式 |
+|---|---|
+| [Trae](https://www.trae.ai/) | 打开本目录，直接在对话里描述要做的集数与段落，由 AI 生成配置并运行命令（本工具即在此基础上开发） |
+| Cursor | 打开目录，用 Agent / Composer 模式读取 README 字段表生成配置 |
+| VS Code + GitHub Copilot（Agent 模式） | 同上，让 Copilot 编辑 JSON 并在集成终端执行 `run.py` |
+| Claude Code / Codex CLI 等命令行 Agent | 在仓库根目录启动，直接让它按 README 生成配置、跑 `compose` |
+| Windsurf、Cline、Roo Code 等 | 打开目录后按同样方式使用 |
+
+几点建议：
+
+- 让 AI 先跑 `python run.py check` 确认环境和草稿目录，再开始写配置。
+- 每集都先 `compose --plan-only` 或 `verify`，确认剪辑清单无误再真正写草稿。
+- 素材（录屏、相框图、预设原型）需要自己准备并放到工作台目录，AI 只负责配置与命令行调用。
+
 ## 目录结构
 
 ```
