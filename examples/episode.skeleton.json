@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "series": "<系列名>",
+  "name": "<单集名>",
+  "transition": {
+    "frame": 0.0
+  },
+  "segments": [
+    { "role": "intro" },
+
+    {
+      "role": "demo",
+      "src": "path/to/demo_recording.mp4",
+      "start": 0.0,
+      "end": 0.0,
+      "label": "<演唱人>版",
+      "captions": []
+    },
+    {
+      "role": "review",
+      "src": "path/to/demo_recording.mp4",
+      "frame": 0.0,
+      "bgm": 0.0,
+      "duration": 16.0,
+      "text": ["点评第一行", "点评第二行"]
+    },
+
+    {
+      "role": "stage",
+      "clips": [
+        { "src": "path/to/stage_recording.mp4", "start": 0.0, "end": 0.0 }
+      ],
+      "label": "<演唱人>版",
+      "captions": []
+    },
+    {
+      "role": "review",
+      "src": "path/to/stage_recording.mp4",
+      "frame": 0.0,
+      "bgm": 0.0,
+      "duration": 24.0,
+      "text": ["点评第一行", "点评第二行"]
+    },
+
+    { "role": "ending" }
+  ]
+}

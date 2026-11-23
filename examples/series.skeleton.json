@@ -1,0 +1,49 @@
+{
+  "name": "<系列名>",
+  "canvas": {
+    "width": "auto",
+    "height": "auto",
+    "fps": 30
+  },
+  "structure": ["intro", "demo", "review", "stage", "review", "stage", "review", "ending"],
+  "fixed": {
+    "intro": { "src": "assets/intro.mp4", "start": 0.0, "end": 5.0 },
+    "ending": { "src": "assets/ending.mp4", "start": 0.0, "end": 3.0, "speed": 1.0 }
+  },
+  "transition": {
+    "duration": 2.0
+  },
+  "label": {
+    "preset": 1,
+    "offset": 0.5,
+    "duration": 4.0
+  },
+  "review": {
+    "preset": 2,
+    "frame_src": "assets/review_frame.png",
+    "bgm_volume": 0.35,
+    "generate_voice": false
+  },
+  "presets": "series/presets_example.json",
+  "badges": [
+    { "preset": 11, "track": "badge_a" },
+    { "preset": 12, "track": "badge_b" }
+  ],
+  "badge_from": "demo",
+  "badge_to": "ending",
+  "transitions": {
+    "demo→review": { "name": "相片切换", "duration": 2.0 },
+    "review→stage": { "name": "横移模糊", "duration": 1.5 },
+    "review→ending": { "name": "推远_II", "duration": 1.0 }
+  },
+  "caption_style": {
+    "font": "<字体名>",
+    "size": 8,
+    "color": "#FFFFFF"
+  },
+  "title_style": {
+    "font": "<字体名>",
+    "size": 12,
+    "color": "#FFFFFF"
+  }
+}

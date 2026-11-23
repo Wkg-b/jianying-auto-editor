@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 运行时生成的数据目录（含素材/成品/清单，不入库）
+templates/
+clips/
+series/
+episodes/
+assets/
+plans/
+output/
+
+# 媒体文件
+*.mp4
+*.mov
+*.mkv
+*.m4a
+*.mp3
+*.wav
+*.jpg
+*.jpeg
+*.png
+*.webp
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
